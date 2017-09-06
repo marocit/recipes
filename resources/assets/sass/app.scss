@@ -1,0 +1,27 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "~bulma/sass/utilities/_all";
+@import "~font-awesome/scss/font-awesome";
+// Variables
+@import "variables";
+$box-background-color: $light;
+$box-radius: $radius-small;
+// Bootstrap
+@import "~bulma/bulma";
+@import "~dropzone/src/dropzone.scss";
+@import "node_modules/buefy/src/scss/buefy";
+.dropzone {
+    margin-bottom: 20px;
+    min-height: auto;
+}
+
+.input,
+.select select {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+
+@import "helpers";
