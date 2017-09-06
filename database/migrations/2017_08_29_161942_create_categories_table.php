@@ -21,8 +21,8 @@ class CreateCategoriesTable extends Migration
         });
 
         Schema::create('category_recipe', function (Blueprint $table) {
-            $table->integer('recipe_id');
-            $table->integer('category_id');
+            $table->integer('recipe_id')->unsigned();
+            $table->integer('category_id')->unsigned();
 
             $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

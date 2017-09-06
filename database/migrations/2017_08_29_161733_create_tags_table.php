@@ -21,8 +21,8 @@ class CreateTagsTable extends Migration
         });
 
         Schema::create('recipe_tag', function (Blueprint $table) {
-            $table->integer('recipe_id');
-            $table->integer('tag_id');
+            $table->integer('recipe_id')->unsigned();
+            $table->integer('tag_id')->unsigned();
             $table->integer('amount')->default(1);
 
             $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');

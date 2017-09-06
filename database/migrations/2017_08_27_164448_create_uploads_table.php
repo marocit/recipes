@@ -15,7 +15,7 @@ class CreateUploadsTable extends Migration
     {
         Schema::create('uploads', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('recipe_id')->unsingned()->index();
+            $table->integer('recipe_id')->unsigned()->index();
             $table->string('filename');
             $table->bigInteger('size');
             $table->string('thumb_filename');
