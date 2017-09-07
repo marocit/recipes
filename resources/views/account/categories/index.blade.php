@@ -18,7 +18,15 @@
                 </div>
                 <div class="level">
                     <div class="level-left">
-                        <a href="{{ route('account.category.edit', $category) }}" class="level-item">Edit</a>
+                        <a href="{{ route('account.category.edit', $category) }}" class="level-item">
+                            <span class="icon is-small"><i class="fa fa-pencil"></i></span>
+                        </a>
+                        {!! Form::open(['method' => 'delete', 'route' => ['account.category.destroy', $category->id]]) !!}
+                        <a type="submit" class="level-item">
+                            <span class="icon is-small"><i class="fa fa-trash-o"></i></span>
+                        </a>
+                        <button type="submit" class="level-item fa-button"><span class="icon is-small"><i class="fa fa-trash-o"></i></span></button>
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>

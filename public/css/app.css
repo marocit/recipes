@@ -15844,6 +15844,13 @@ section#rezept-bg .primary-overlay {
   height: 100%;
 }
 
+.fa-button {
+  background: none;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+}
+
 .m-t-5 {
   margin-top: 5px !important;
 }

@@ -54,7 +54,7 @@ class RecipeController extends Controller
     private function handleRequest($request)
     {
         $data = $request->all();
-        $data['slug'] = strtolower(str_slug($request->slug, ('-')));
+        $data['slug'] = strtolower(str_slug($request->name, ('-')));
 
         return $data;
     }
@@ -112,8 +112,8 @@ class RecipeController extends Controller
      */
     public function update(UpdateRecipeRequest $request, Recipe $recipe)
     {
-
-        $recipe->update($request->all());
+        $data = $this->handleRequest($request);
+        $recipe->update($data);
 
         return redirect()->route('account.recipes.index')
             ->withSuccess('Rezept wurde geändert!');
@@ -147,7 +147,7 @@ class RecipeController extends Controller
      * @param  \App\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Recipe $recipe)
+    public function destroy(Request $recipe)
     {
         //
     }

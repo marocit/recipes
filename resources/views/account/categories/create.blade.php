@@ -22,7 +22,7 @@
         @endif
     </div>
 
-    <div class="field">
+    <!-- <div class="field">
         <label for="slug" class="label">Slug</label>
         <p class="control">
             <input type="text" name="slug" id="slug" class="input {{ $errors->has('slug') ? 'is-danger' : '' }}">
@@ -32,7 +32,7 @@
                 {{ $errors->first('slug') }}
             </p>
         @endif
-    </div>
+    </div> -->
 
     <div class="field is-grouped">
         <p class="control">

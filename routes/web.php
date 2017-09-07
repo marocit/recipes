@@ -41,6 +41,7 @@ Route::group(['prefix' => '/recipes', 'middleware' => ['auth'], 'namespace' => '
    Route::post('/category', 'CategoryController@store')->name('account.category.store');
    Route::get('/category/{category}/edit', 'CategoryController@edit')->name('account.category.edit');
    Route::patch('category/edit/{category}', 'CategoryController@update')->name('account.category.update');
+   Route::delete('category/delete/{category}', 'CategoryController@destroy')->name('account.category.destroy');
 });
 
 Route::post('/upload/{recipe}', 'Upload\UploadController@store')->name('upload.store');

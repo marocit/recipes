@@ -49,7 +49,7 @@ class TagController extends Controller
     private function handleRequest($request)
     {
         $data = $request->all();
-        $data['slug'] = strtolower(str_slug($request->slug, ('-')));
+        $data['slug'] = strtolower(str_slug($request->name, ('-')));
 
         return $data;
     }

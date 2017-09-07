@@ -25,7 +25,6 @@ class StoreRecipeRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'slug' => 'required',
             'description' => 'required',
         ];
     }

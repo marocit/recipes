@@ -49,8 +49,17 @@ class CategoryController extends Controller
     private function handleRequest($request)
     {
         $data = $request->all();
-        $data['slug'] = strtolower(str_slug($request->slug, ('-')));
+        $data['slug'] = strtolower(str_slug($request->name, ('-')));
 
         return $data;
+    }
+
+    public function destroy($id)
+    {
+        $category = Category::findOrFail($id);
+        $category->recipes()->detach();
+        $category->delete();
+
+        return redirect()->back();
     }
 }
