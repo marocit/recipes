@@ -5,15 +5,17 @@
 </head>
 <body>
     <div id="app">
-        <section class="hero is-info is-medium">
-            <div class="hero-head">
+        <section id="rezept-bg" class="hero is-warning is-medium">
+            <div class="primary-overlay">
+                <div class="hero-head">
                 @include('layouts.partials._navigation')
-            </div>
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h1 class="title is-1">
-                        Rezepte
-                    </h1>
+                </div>
+                <div class="hero-body">
+                    <div class="container has-text-centered">
+                        <h1 class="title is-1 has-text-white">
+                            Rezepte
+                        </h1>
+                    </div>
                 </div>
             </div>
         </section>

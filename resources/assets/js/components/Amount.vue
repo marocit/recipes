@@ -1,26 +1,34 @@
 <template>
     <div class="column is-offset-1 m-t-20">
         <h2 class="title">Anzahl</h2>
-        <form v-on:submit.prevent="addAmount" >
-            <div class="field is-grouped">
-                <div class="control select">
-                    <select v-model="tag">
-                        <option selected>dwdwd</option>
-                        <option v-for="option in tags" v-bind:value="option.id" placeholder="test...">
-                            {{ option.name }}
-                         </option>
-                    </select>
+        <form v-on:submit.prevent="addAmount">
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select v-model="tag">
+                                    <option v-for="option in tags" v-bind:value="option.id" placeholder="test...">
+                                        {{ option.name }}
+                                     </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input type="text" v-model="amount" class="input" placeholder="Anzahl">
+                        </div>
+                    </div>
+                 </div>
+             </div>
 
-                </div>
-                <div class="control">
-                    <input type="text" v-model="amount" class="input" placeholder="Anzahl">
-                </div>
-            </div>
+
                 <div class="field is-grouped">
-                <p class="control">
-                    <button class="button is-primary">Füge Anzahl hinzu</button>
-                </p>
-            </div>
+                    <p class="control">
+                        <button class="button is-primary">Füge Anzahl hinzu</button>
+                    </p>
+                </div>
         </form>
         <hr>
         <div class="menu">

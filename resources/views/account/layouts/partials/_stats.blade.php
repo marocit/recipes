@@ -1,4 +1,4 @@
-<section class="hero is-primary">
+<section class="hero is-primary m-t-50">
     <div class="hero-body">
         <div class="level">
             <div class="level-item has-text-centered">
