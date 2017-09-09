@@ -17,7 +17,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                            <input type="text" v-model="amount" class="input" placeholder="Anzahl">
+                            <input type="number" v-model="amount" class="input" placeholder="Anzahl">
                         </div>
                     </div>
                  </div>

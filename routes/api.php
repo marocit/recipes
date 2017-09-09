@@ -23,4 +23,5 @@ Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'] , function() {
     Route::get('fetchtags/{id}', 'Api\CauseApiController@fetchTags')->name('fetchTags');
     Route::get('fetchalltags', 'Api\CauseApiController@fetchAllTags')->name('fetchAllTags');
     Route::post('apiamountstore', 'Api\CauseApiController@apiAmountStore')->name('apiAmountStore');
+    Route::delete('api-delete-ingredient/{id}', 'Api\CauseApiController@apiDeleteIngredient');
 });

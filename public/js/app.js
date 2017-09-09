@@ -59529,7 +59529,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Ingredient.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Ingredient.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Ingredient.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59558,34 +59558,6 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -59714,6 +59686,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.get('/admin/fetchingtags/' + this.recipe).then(function (response) {
                 return _this4.tags = response.data;
             });
+        },
+        deleteIngredient: function deleteIngredient(ingredient) {
+            var _this5 = this;
+
+            axios.delete('/api/v1/api-delete-ingredient/' + ingredient).then(function (response) {
+                return _this5.fetchIngredients();
+            });
         }
     }
 });
@@ -59766,6 +59745,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   })])]), _vm._v(" "), _c('div', {
+    staticClass: "field is-horizontal"
+  }, [_c('div', {
+    staticClass: "field-body"
+  }, [_c('div', {
     staticClass: "field"
   }, [_c('label', {
     staticClass: "label",
@@ -59783,7 +59766,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "input",
     attrs: {
-      "type": "text",
+      "type": "number",
       "name": "unit",
       "id": "unit"
     },
@@ -59847,14 +59830,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.recipe_id = $event.target.value
       }
     }
-  })])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c('div', {
+  })])])])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _c('div', {
     staticClass: "column is-offset-1"
   }, [_c('h3', {
     staticClass: "title is-3"
   }, [_vm._v("Zutaten")]), _vm._v(" "), _vm._l((_vm.ingredients), function(data) {
     return _c('div', {}, [_c('p', {
       staticClass: "subtitle is-5 m-b-5"
-    }, [_c('strong', [_vm._v(_vm._s(data.name) + ":")]), _vm._v("\n                        " + _vm._s(data.unit) + _vm._s(data.einheit) + "\n                    ")])])
+    }, [_c('strong', [_vm._v(_vm._s(data.name) + ":")]), _vm._v("\n                                " + _vm._s(data.unit) + _vm._s(data.einheit) + "\n                                "), _c('a', {
+      on: {
+        "click": function($event) {
+          $event.preventDefault();
+          _vm.deleteIngredient(data.id)
+        }
+      }
+    }, [_vm._m(1, true)])])])
   })], 2)])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
@@ -59864,6 +59854,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('button', {
     staticClass: "button is-primary"
   }, [_vm._v("Füge Zutat hinzu")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('span', {
+    staticClass: "icon icon-color m-l-10"
+  }, [_c('i', {
+    staticClass: "fa fa-times"
+  })])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -59890,7 +59886,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Category.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Category.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Category.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60044,7 +60040,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Drop.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Drop.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Drop.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60225,7 +60221,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Anlass.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Anlass.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Anlass.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60515,7 +60511,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Amount.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Amount.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Amount.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60702,7 +60698,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "input",
     attrs: {
-      "type": "text",
+      "type": "number",
       "placeholder": "Anzahl"
     },
     domProps: {
@@ -60759,7 +60755,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Test.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Test.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Test.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60936,7 +60932,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Tag.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Tag.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Tag.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -61037,7 +61033,7 @@ var Component = __webpack_require__(2)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "c:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Clock.vue"
+Component.options.__file = "C:\\wamp\\www\\rezept.dev\\resources\\assets\\js\\components\\Clock.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Clock.vue: functional components are not supported with templates, they should use render functions.")}
 

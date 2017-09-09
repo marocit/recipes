@@ -1,4 +1,4 @@
-<nav id="navbar-fixed" class="navbar is-transparent m-b-50">
+<nav id="navbar-fixed" class="navbar is-transparent has-shadow m-b-50">
     <div class="container">
         <div class="navbar-brand">
             <a href="{{ route('home') }}" class="navbar-item is-brand">
@@ -14,7 +14,7 @@
 
 
         <div id="navMenuTransparentExample" class="navbar-menu">
-            <div class="navbar-end">
+            <div class="navbar-end is-uppercase">
                 @auth
                 <a href="{{ route('account.recipes.index') }}" class="navbar-item">
                     Rezepte
@@ -25,14 +25,16 @@
                 <a href="{{ route('account.category.index') }}" class="navbar-item">
                     Kategorien
                 </a>
-
-
-                <a href="#" class="navbar-item" onclick="event.preventDefault(); document.getElementById('logout').submit();">
-                    Sign out
-                </a>
-
                 <a href="{{ route('account') }}" class="navbar-item">
                     Your Account
+                </a>
+                {{--  <a href="#" class="navbar-item" onclick="event.preventDefault(); document.getElementById('logout').submit();">
+                    Sign out
+                </a>  --}}
+                <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank" onclick="event.preventDefault(); document.getElementById('logout').submit();">
+                    <span class="icon" style="color: #7D8CA3;">
+                    <i class="fa fa-sign-out"></i>
+                    </span>
                 </a>
             @endauth
             @guest

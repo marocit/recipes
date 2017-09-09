@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Tag;
 use App\Recipe;
+use App\Ingredient;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -50,5 +51,13 @@ class CauseApiController extends Controller
         $recipe->tags()->updateExistingPivot($tag, ['amount' => $amount]);
         return response()->json($recipe, 200);
 
+    }
+
+    public function apiDeleteIngredient($id)
+    {
+        $ingredient = Ingredient::findOrFail($id);
+        $ingredient->delete();
+
+        return response()->json($ingredient, 200);
     }
 }

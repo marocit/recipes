@@ -7,12 +7,18 @@
 @import "variables";
 $box-background-color: $light;
 $box-radius: $radius-small;
+
+$navbar-background-color: #EFF1F3;
+$navbar-item-color: #223843!important;
 // Bootstrap
 @import "~bulma/bulma";
 @import "~dropzone/src/dropzone.scss";
 @import "node_modules/buefy/src/scss/buefy";
 
 $primary-overlay: rgba(50,146,166,0.1);
+
+
+
 .dropzone {
     margin-bottom: 20px;
     min-height: auto;
@@ -61,5 +67,8 @@ section#rezept-bg {
   cursor: pointer;
 }
 
+.icon-color{
+  color: red; 
+}
 
 @import "helpers";

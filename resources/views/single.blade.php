@@ -70,8 +70,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
                     @endif
-                    <hr>
+                    
                     @if($recipe->tags->count())
                         <h3 class="subtitle">Anlässe</h3>
                             <div class="level">
@@ -83,8 +84,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
                     @endif
-                    <hr>
+                    
                     <h3 class="subtitle">Aktionen</h3>
                         <div class="level">
                             <div class="level-left">

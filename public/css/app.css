@@ -9347,7 +9347,7 @@ a.nav-item:not(.button).is-tab.is-active {
 }
 
 .navbar {
-  background-color: white;
+  background-color: #EFF1F3;
   min-height: 3.25rem;
   position: relative;
 }
@@ -9456,7 +9456,7 @@ a.nav-item:not(.button).is-tab.is-active {
 
 .navbar-item,
 .navbar-link {
-  color: #4a4a4a;
+  color: #223843 !important;
   display: block;
   line-height: 1.5;
   padding: 0.5rem 1rem;
@@ -15849,6 +15849,10 @@ section#rezept-bg .primary-overlay {
   padding: 0px;
   border: none;
   cursor: pointer;
+}
+
+.icon-color {
+  color: red;
 }
 
 .m-t-5 {
