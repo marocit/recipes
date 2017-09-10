@@ -5,7 +5,7 @@
 
                 <div class="column is-half">
 
-                    
+
 
                     <div class="field">
                         <label for="name" class="label">Name</label>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <div class="field is-grouped">
                         <p class="control">
@@ -44,10 +44,10 @@
                 </div>
                 <div class="column is-offset-1">
                             <h3 class="title is-3">Zutaten</h3>
-                            <div class="" v-for="data in ingredients">
-                                <p class="subtitle is-5 m-b-5"> <strong>{{data.name}}:</strong>
-                                    {{data.unit}}{{data.einheit}}
-                                    <a @click.prevent="deleteIngredient(data.id)"><span class="icon icon-color m-l-10">
+                            <div class="" v-for="ingredient in ingredients" :key="ingredient.id" v-on:delete="deleteIngredient">
+                                <p class="subtitle is-5 m-b-5"> <strong>{{ingredient.name}}:</strong>
+                                    {{ingredient.unit}}{{ingredient.einheit}}
+                                    <a @click.prevent="deleteIngredient(ingredient.id)"><span class="icon icon-color m-l-10">
                                         <i class="fa fa-times"></i>
                                     </span></a>
                                 </p>
@@ -115,9 +115,15 @@
                axios.get('/admin/fetchingtags/'+this.recipe)
                     .then(response => this.tags = response.data);
             },
-            deleteIngredient(ingredient){
-                axios.delete('/api/v1/api-delete-ingredient/'+ ingredient)
-                    .then(response => this.fetchIngredients());
+            deleteIngredient(id){
+                let self = this;
+                axios.delete('/api/v1/api-delete-ingredient/'+ id)
+                    .then(function(response) {
+                        // console.log(response.data)
+                        self.ingredients = self.ingredients.filter((ingredient) => {
+                          return ingredient.id !== id
+                        })
+                    })
             }
         }
     }
